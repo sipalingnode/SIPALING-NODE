@@ -7,3 +7,23 @@
 </p>
 
 # FIND ELIGIBLE VALIDATOR with small money :)
+## CYSIC
+```
+wget -O cysic.sh https://raw.githubusercontent.com/sipalingnode/SIPALING-NODE/main/cysic.sh && chmod +x cysic.sh && ./cysic.sh
+```
+## INICHAIN-GENESIS (Testnet)
+```
+wget -O inichain-genesis.sh https://raw.githubusercontent.com/sipalingnode/SIPALING-NODE/main/inichain-genesis.sh && chmod +x inichain-genesis.sh && ./inichain-genesis.sh
+```
+## INICHAIN-MAINNET
+```
+wget -O inichain-mainnet.sh https://raw.githubusercontent.com/sipalingnode/SIPALING-NODE/main/inichain-mainnet.sh && chmod +x inichain-mainnet.sh && ./inichain-mainnet.sh
+```
+## MULTIPLE
+```
+wget -O multiple-node.sh https://raw.githubusercontent.com/sipalingnode/SIPALING-NODE/main/multiple-node.sh && chmod +x multiple-node.sh && ./multiple-node.sh
+```
+## PRIVASEA
+```
+wget -O privasea.sh https://raw.githubusercontent.com/sipalingnode/SIPALING-NODE/main/privasea.sh && chmod +x privasea.sh && ./privasea.sh
+```
