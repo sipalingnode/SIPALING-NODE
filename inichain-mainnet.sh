@@ -29,12 +29,15 @@ read -p "Masukkan nama pekerja (misal: Worker001): " WORKER_NAME
 echo "Pilih kolam penambangan utama:"
 echo "1. Mainnet Pool a"
 echo "2. Mainnet Pool b"
-read -p "Pilih (1 atau 2): " POOL_CHOICE
+echo "3. Mainnet Pool c"
+read -p "Pilih (1, 2, atau 3): " POOL_CHOICE
 
 if [ "$POOL_CHOICE" == "1" ]; then
   POOL_URL="stratum+tcp://$WALLET_ADDRESS.$WORKER_NAME@pool-a.yatespool.com:31588"
 elif [ "$POOL_CHOICE" == "2" ]; then
   POOL_URL="stratum+tcp://$WALLET_ADDRESS.$WORKER_NAME@pool-b.yatespool.com:32488"
+elif [ "$POOL_CHOICE" == "3" ]; then
+  POOL_URL="stratum+tcp://$WALLET_ADDRESS.$WORKER_NAME@pool-c.yatespool.com:31189"
 else
   echo "Pilihan tidak valid. Keluar."
   exit 1
