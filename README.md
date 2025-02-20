@@ -1,10 +1,16 @@
-<p style="font-size:14px" align="right">
-<a href="https://t.me/airdropasc" target="_blank">Join our telegram <img src="https://user-images.githubusercontent.com/50621007/183283867-56b4d69f-bc6e-4939-b00a-72aa019d1aea.png" width="30"/></a>
+<p align="center">
+  <img height="300" height="auto" src="https://github.com/sipalingnode/sipalingnode/blob/main/logo.png">
 </p>
 
+<h2 align="center"><b>Community Team</b></h2>
 <p align="center">
-  <img height="300" height="auto" src="https://user-images.githubusercontent.com/109174478/209359981-dc19b4bf-854d-4a2a-b803-2547a7fa43f2.jpg">
+  <a href="https://www.airdropasc.com" target="_blank"><img src="https://github.com/sipalingnode/sipalingnode/blob/main/logo.png" width="50"/></a>&nbsp;&nbsp;&nbsp;
+  <a href="https://t.me/airdropasc" target="_blank"><img src="https://github.com/user-attachments/assets/56e7f6ee-18b7-4b36-becc-ec6e4de7bff9" width="50"/></a>&nbsp;&nbsp;&nbsp;
+  <a href="https://x.com/Autosultan_team" target="_blank"><img src="https://github.com/user-attachments/assets/fbb43aa4-9652-4a49-b984-5cf032b6b1ac" width="50"/></a>&nbsp;&nbsp;&nbsp;
+  <a href="https://www.youtube.com/@ZamzaSalim" target="_blank"><img src="https://github.com/user-attachments/assets/c15509f9-acb7-49ce-989a-5bac62e7e549" width="50"/></a>
 </p>
+
+---
 
 # FIND ELIGIBLE VALIDATOR with small money :)
 ## CYSIC
@@ -26,4 +32,8 @@ wget -O multiple-node.sh https://raw.githubusercontent.com/sipalingnode/SIPALING
 ## PRIVASEA
 ```
 wget -O privasea.sh https://raw.githubusercontent.com/sipalingnode/SIPALING-NODE/main/privasea.sh && chmod +x privasea.sh && ./privasea.sh
+```
+## 0G-DA
+```
+curl -O https://raw.githubusercontent.com/sipalingnode/SIPALING-NODE/main/og-da.sh && chmod +x og-da.sh && ./og-da.sh
 ```
