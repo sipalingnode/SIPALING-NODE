@@ -37,3 +37,7 @@ wget -O privasea.sh https://raw.githubusercontent.com/sipalingnode/SIPALING-NODE
 ```
 curl -O https://raw.githubusercontent.com/sipalingnode/SIPALING-NODE/main/og-da.sh && chmod +x og-da.sh && ./og-da.sh
 ```
+## DANOM (MONAD)
+```
+curl -O https://raw.githubusercontent.com/sipalingnode/SIPALING-NODE/main/danom.sh && chmod +x danom.sh && ./danom.sh
+```
