@@ -33,11 +33,15 @@ wget -O multiple-node.sh https://raw.githubusercontent.com/sipalingnode/SIPALING
 ```
 wget -O privasea.sh https://raw.githubusercontent.com/sipalingnode/SIPALING-NODE/main/privasea.sh && chmod +x privasea.sh && ./privasea.sh
 ```
-## 0G-DA
+## 0G-DA-CLIENT
 ```
 curl -O https://raw.githubusercontent.com/sipalingnode/SIPALING-NODE/main/og-da.sh && chmod +x og-da.sh && ./og-da.sh
 ```
 ## DANOM (MONAD)
 ```
 curl -O https://raw.githubusercontent.com/sipalingnode/SIPALING-NODE/main/danom.sh && chmod +x danom.sh && ./danom.sh
+```
+## OG-DA-NODE
+```
+curl -O https://raw.githubusercontent.com/sipalingnode/SIPALING-NODE/main/og-da-node.sh && chmod +x og-da-node.sh && ./og-da-node.sh
 ```
