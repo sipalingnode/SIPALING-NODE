@@ -215,12 +215,12 @@ else
   sudo systemctl status ritual-network.service
 fi
 
-# Wait a bit for deployment to start
-echo "Waiting for deployment to initialize..."
-sleep 10
-
 # Start containers
 echo "Starting containers..."
 docker compose -f deploy/docker-compose.yaml up -d
+
+# Wait a bit for deployment to start
+echo "Waiting for deployment to initialize..."
+sleep 10
 
 echo "Ritual Network Infernet installation complete!"
