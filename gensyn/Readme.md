@@ -16,7 +16,7 @@
 ## SPEK VPS
 |  Hardware/VPS |  Minimum |
 | ------------ | ------------ |
-| CPU  | Multi-core processor  |
+| CPU  | 4 core  |
 | RAM | 16GB of memory |
 | Storage  | 100 GB free disk space |
 | Network | Stable internet connection |
