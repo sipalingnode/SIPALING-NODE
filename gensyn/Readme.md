@@ -83,4 +83,7 @@ source .venv/bin/activate
   ```
   ngrok http 3000
   ```
-- Pada bagian
+- Pada bagian forwading
+- Salin Link nya dan Paste di browser
+- Lalu signup dengan email yang sama
+- Done
