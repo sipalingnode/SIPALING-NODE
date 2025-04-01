@@ -29,9 +29,6 @@ sudo apt-get install -y nodejs
 ```
 sudo apt update && sudo apt install -y python3 python3-venv python3-pip curl screen git yarn && curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - && echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list && sudo apt update && sudo apt install -y yarn
 ```
-```
-pip install protobuf==5.27.0
-```
 ## Open Port
 ```
 sudo ufw allow ssh
@@ -51,6 +48,18 @@ screen -S gensyn
 ```
 python3 -m venv .venv
 source .venv/bin/activate
+```
+```
+pip install "protobuf<5.28.0"
+```
+```
+pip install --upgrade pip
+pip install hivemind
+```
+```
+pip install --force-reinstall "protobuf<5.28.0"
+``` 
+```
 ./run_rl_swarm.sh
 ```
 ## Nanti ada pilihan hugging face pilih N (no) lalu enter
