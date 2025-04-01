@@ -1,11 +1,7 @@
 #!/bin/bash
 
-# Function to display logo
-display_logo() {
-  sleep 2
-  curl -s https://raw.githubusercontent.com/zamzasalim/logo/main/asc.sh | bash
-  sleep 1
-}
+curl -s https://raw.githubusercontent.com/zamzasalim/logo/main/asc.sh | bash
+sleep 5
 
 sudo ufw allow ssh
 sudo ufw enable
