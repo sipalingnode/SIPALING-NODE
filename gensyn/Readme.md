@@ -65,3 +65,22 @@ source .venv/bin/activate
 - Klik Login
 - Signup with email & verify
 - Done
+
+## Apabila tidak dapat otp email pake cara ini
+- Install Grok
+  ```
+  wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz && tar -xvzf ngrok-v3-stable-linux-amd64.tgz && sudo mv ngrok /usr/local/bin/
+  ```
+- Signup with email : https://ngrok.com/
+- Login
+- Go to Your Authtoken
+- Showing Authtoken
+- Copy & paste di vps kode yang ada di command line
+- Jalankan ngrok dengan screen
+  ```
+  screen -S ngrok
+  ```
+  ```
+  ngrok http 3000
+  ```
+- Pada bagian
