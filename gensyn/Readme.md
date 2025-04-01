@@ -50,3 +50,14 @@ python3 -m venv .venv
 source .venv/bin/activate
 ./run_rl_swarm.sh
 ```
+## Nanti ada pilihan hugging face pilih N (no) lalu enter
+## Jika sudah sampe proses seperti dibawah ini
+<p align="center">
+  <img height="300" height="auto" src="https://github.com/sipalingnode/SIPALING-NODE/blob/main/gensyn/login.png">
+</p>
+
+- Open Browser
+- IPVPSMU:3000
+- Klik Login
+- Signup with email & verify
+- Done
