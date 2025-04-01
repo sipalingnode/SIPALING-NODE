@@ -12,7 +12,7 @@
 
 ---
 
-# FIND ELIGIBLE VALIDATOR with small money :)
+# FIND ELIGIBLE TESTNET VALIDATOR with small money :)
 ## CYSIC
 ```
 wget -O cysic.sh https://raw.githubusercontent.com/sipalingnode/SIPALING-NODE/main/cysic.sh && chmod +x cysic.sh && ./cysic.sh
@@ -45,3 +45,4 @@ curl -O https://raw.githubusercontent.com/sipalingnode/SIPALING-NODE/main/danom.
 ```
 curl -O https://raw.githubusercontent.com/sipalingnode/SIPALING-NODE/main/og-da-node.sh && chmod +x og-da-node.sh && ./og-da-node.sh
 ```
+## [GENSYN](https://github.com/sipalingnode/SIPALING-NODE/tree/main/gensyn#readme)
