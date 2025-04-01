@@ -12,7 +12,7 @@
 
 ---
 
-# FIND ELIGIBLE TESTNET VALIDATOR with small money :)
+# FIND ELIGIBLE TESTNET NODE with small money :)
 ## CYSIC
 ```
 wget -O cysic.sh https://raw.githubusercontent.com/sipalingnode/SIPALING-NODE/main/cysic.sh && chmod +x cysic.sh && ./cysic.sh
