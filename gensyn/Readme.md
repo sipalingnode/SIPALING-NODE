@@ -67,18 +67,12 @@ pip install --force-reinstall "protobuf<5.28.0"
   <img height="100" height="auto" src="https://github.com/sipalingnode/SIPALING-NODE/blob/main/gensyn/hg.png">
 </p>
 
-## Jika sudah sampe proses seperti dibawah ini
+## Jika sudah sampe proses seperti dibawah ini. Keluar screen dulu dengan cara `CTRL+AD`
 <p align="center">
   <img height="300" height="auto" src="https://github.com/sipalingnode/SIPALING-NODE/blob/main/gensyn/login.png">
 </p>
 
-- Open Browser
-- IPVPSMU:3000
-- Klik Login
-- Signup with email & verify
-- Done
-
-## Apabila tidak dapat otp email pake cara ini
+## Lanjut Register Testnet
 - Install Grok
   ```
   wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz && tar -xvzf ngrok-v3-stable-linux-amd64.tgz && sudo mv ngrok /usr/local/bin/
@@ -98,4 +92,12 @@ pip install --force-reinstall "protobuf<5.28.0"
 - Pada bagian forwading
 - Salin Link nya dan Paste di browser
 - Lalu signup dengan email yang sama
-- Done
+- Done. Langsung keluar screen `CTRL+AD`
+
+## Cek Proses apakah sudah seperti dibawah ini
+- Open screen gensyn `screen -rd gensyn`
+- <p align="center">
+  <img height="300" height="auto" src="https://github.com/sipalingnode/SIPALING-NODE/blob/main/gensyn/done.png">
+</p>
+
+- Jika dirasa sudah langsung keluar screen saja. `CTRL+AD`
