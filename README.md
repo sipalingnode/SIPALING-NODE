@@ -46,3 +46,8 @@ curl -O https://raw.githubusercontent.com/sipalingnode/SIPALING-NODE/main/danom.
 curl -O https://raw.githubusercontent.com/sipalingnode/SIPALING-NODE/main/og-da-node.sh && chmod +x og-da-node.sh && ./og-da-node.sh
 ```
 ## [GENSYN](https://github.com/sipalingnode/SIPALING-NODE/tree/main/gensyn#readme)
+
+## RITUAL
+```
+curl -O https://raw.githubusercontent.com/sipalingnode/SIPALING-NODE/main/ritual-network.sh && chmod +x ritual-network.sh && ./ritual-network.sh
+```
