@@ -29,7 +29,7 @@ wget -O inichain-mainnet.sh https://raw.githubusercontent.com/sipalingnode/SIPAL
 ```
 wget -O multiple-node.sh https://raw.githubusercontent.com/sipalingnode/SIPALING-NODE/main/multiple-node.sh && chmod +x multiple-node.sh && ./multiple-node.sh
 ```
-## PRIVASEA
+## PRIVASEA (ENDED)
 ```
 wget -O privasea.sh https://raw.githubusercontent.com/sipalingnode/SIPALING-NODE/main/privasea.sh && chmod +x privasea.sh && ./privasea.sh
 ```
