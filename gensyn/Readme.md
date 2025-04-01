@@ -51,6 +51,10 @@ source .venv/bin/activate
 ./run_rl_swarm.sh
 ```
 ## Nanti ada pilihan hugging face pilih N (no) lalu enter
+<p align="center">
+  <img height="100" height="auto" src="https://github.com/sipalingnode/SIPALING-NODE/blob/main/gensyn/hg.png">
+</p>
+
 ## Jika sudah sampe proses seperti dibawah ini
 <p align="center">
   <img height="300" height="auto" src="https://github.com/sipalingnode/SIPALING-NODE/blob/main/gensyn/login.png">
