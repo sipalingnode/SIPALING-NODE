@@ -51,3 +51,4 @@ curl -O https://raw.githubusercontent.com/sipalingnode/SIPALING-NODE/main/og-da-
 ```
 curl -O https://raw.githubusercontent.com/sipalingnode/SIPALING-NODE/main/ritual-network.sh && chmod +x ritual-network.sh && ./ritual-network.sh
 ```
+## [AZTEC](https://github.com/sipalingnode/SIPALING-NODE/tree/main/aztec)
