@@ -3,38 +3,33 @@
 curl -s https://raw.githubusercontent.com/zamzasalim/logo/main/asc.sh | bash
 sleep 5
 
-rm -rf infernet-container-starter
 rm -rf ritual-service.sh
 rm -rf ritual-deployment.log
 rm -rf ritual-service.log
+rm -rf infernet-container-starter
 
 # === EARLY CLEANUP SECTION ===
 echo ">> Stopping running containers and removing specific Docker images..."
 
-# Stop ritual-network systemd service if running
 if systemctl is-active --quiet ritual-network.service; then
   echo "Stopping ritual-network.service..."
   sudo systemctl stop ritual-network.service
 fi
 
-# Disable the service so it doesn't start on boot
 if systemctl is-enabled --quiet ritual-network.service; then
   echo "Disabling ritual-network.service..."
   sudo systemctl disable ritual-network.service
 fi
 
-# Remove the service file
 SERVICE_FILE="/etc/systemd/system/ritual-network.service"
 if [ -f "$SERVICE_FILE" ]; then
   echo "Removing $SERVICE_FILE..."
   sudo rm "$SERVICE_FILE"
 fi
 
-# Reload systemd to apply the changes
 echo "Reloading systemd daemon..."
 sudo systemctl daemon-reload
 
-# List of base image names (without tags)
 IMAGES_TO_REMOVE=(
   "ritualnetwork/infernet-node"
   "ritualnetwork/hello-world-infernet"
@@ -44,11 +39,9 @@ IMAGES_TO_REMOVE=(
 )
 
 for base_image in "${IMAGES_TO_REMOVE[@]}"; do
-  # Get all image tags for this base image
   image_ids=$(docker images --format "{{.Repository}}:{{.Tag}} {{.ID}}" | grep "^$base_image:" | awk '{print $2}')
   
   for image_id in $image_ids; do
-    # Find running containers using this image
     container_ids=$(docker ps -q --filter "ancestor=$image_id")
 
     if [ -n "$container_ids" ]; then
@@ -70,7 +63,6 @@ sudo ufw allow ssh
 sudo ufw enable
 sudo ufw status
 
-# Check if Docker is installed
 if ! command -v docker &> /dev/null; then
   echo "Docker is not installed. Installing Docker..."
   sudo apt-get update
@@ -86,7 +78,6 @@ else
   echo "Docker is already installed."
 fi
 
-# Check if Docker Compose is installed
 if ! command -v docker-compose &> /dev/null; then
   echo "Docker Compose is not installed. Installing Docker Compose..."
   sudo curl -L "https://github.com/docker/compose/releases/download/v2.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -102,7 +93,6 @@ else
   echo "Docker Compose is already installed."
 fi
 
-# Check and install dependencies
 for pkg in git jq lz4 screen; do
   if ! command -v $pkg &> /dev/null; then
     echo "$pkg is not installed. Installing $pkg..."
@@ -112,16 +102,14 @@ for pkg in git jq lz4 screen; do
   fi
 done
 
-# Clone Repository
 echo "Cloning repository..."
 git clone https://github.com/ritual-net/infernet-container-starter
 cd infernet-container-starter
 
-# Update image version in docker-compose.yaml
 echo "Updating infernet-node version to 1.4.0 in docker-compose.yaml..."
 sed -i 's|\(ritualnetwork/infernet-node:\).*|\11.4.0|' deploy/docker-compose.yaml
 
-# Create config files
+# Input section
 echo "Submit Privatekey Metamask"
 read -s private_key
 echo "Private key received (hidden for security)"
@@ -130,6 +118,10 @@ if [[ ! $private_key =~ ^0x ]]; then
   private_key="0x$private_key"
   echo "Added 0x prefix to private key"
 fi
+
+echo "Submit RPC BASE MAINNET"
+read rpc_url
+echo "RPC URL received: $rpc_url"
 
 cat > ~/infernet-container-starter/deploy/config.json << EOL
 {
@@ -144,7 +136,7 @@ cat > ~/infernet-container-starter/deploy/config.json << EOL
     "chain": {
         "enabled": true,
         "trail_head_blocks": 3,
-        "rpc_url": "https://mainnet.base.org/",
+        "rpc_url": "${rpc_url}",
         "registry_address": "0x3B1554f346DFe5c482Bb4BA31b880c1C18412170",
         "wallet": {
           "max_gas_limit": 4000000,
@@ -153,8 +145,8 @@ cat > ~/infernet-container-starter/deploy/config.json << EOL
         },
         "snapshot_sync": {
           "sleep": 3,
-          "batch_size": 10000,
-          "starting_sub_id": 180000,
+          "batch_size": 1000,
+          "starting_sub_id": 245000,
           "sync_period": 30
         }
     },
@@ -185,7 +177,6 @@ EOL
 
 cp ~/infernet-container-starter/deploy/config.json ~/infernet-container-starter/projects/hello-world/container/config.json
 
-# Create systemd service for Ritual Network
 echo "Creating systemd service for Ritual Network..."
 cd ~/infernet-container-starter
 
@@ -229,22 +220,22 @@ StandardError=file:/root/ritual-service.log
 WantedBy=multi-user.target
 EOL
 
-# Enable and start service
-sudo systemctl daemon-reload
-sudo systemctl enable ritual-network.service
-sudo systemctl start ritual-network.service
-
-sleep 5
-if sudo systemctl is-active --quiet ritual-network.service; then
-  echo "? Ritual Network service started successfully!"
-else
-  echo "?? Warning: Service might not have started correctly. Checking status..."
-  sudo systemctl status ritual-network.service
-fi
-
 echo "Waiting for deployment to initialize..."
 sleep 10
 
+echo "Reloading systemd daemon"
+sudo systemctl daemon-reload
+
+echo "Enabling ritual-network.service"
+sudo systemctl enable ritual-network.service
+
+echo "Starting ritual-network.service"
+sudo systemctl start ritual-network.service
+
+sleep 5
+
+echo "Checking service status:"
+sudo systemctl status ritual-network.service
+
 echo "Ritual Network Infernet installation complete!"
-echo "Cek status gunakan : 'sudo systemctl status ritual-network.service' "
-echo "Cek Logs Gunakan : 'docker logs infernet-node -f' "
+sudo systemctl start ritual-network.service
