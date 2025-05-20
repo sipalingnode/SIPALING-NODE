@@ -7,7 +7,7 @@ echo "CHANGE RPC AZTEC"
 sleep 1
 
 echo "Menghentikan node lama di tmux..."
-tmux send-keys -t aztec C-c
+tmux kill-session -t aztec
 sleep 2
 # Prompt pengguna untuk input penting
 read -p "Masukkan ETH Sepolia RPC URL: " RPC_URL
